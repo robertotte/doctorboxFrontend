@@ -1,0 +1,137 @@
+.modalClose {
+  position: absolute;
+  top: -15px;
+  right: 0%;
+  cursor: pointer;
+  z-index: 9;
+  border-radius: 10rem;
+  background: white;
+  padding: 5px;
+}
+
+i {
+  color: #c00;
+  font-size: 20px;
+}
+
+.modal-dialog {
+  color: #333;
+  max-width: 600px;
+}
+
+.modal-title {
+  margin: 0 auto;
+  color: #0c6e3f;
+  font-size: 1.5rem;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1px;
+}
+
+.pd-0-30 {
+  padding: 0 30px;
+}
+
+.btn {
+  border: 1px solid #2e6d4a;
+  cursor: pointer;
+  background: #2e6d4a !important;
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.signInForm .form-group {
+  width: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 50px;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: rgb(78, 118, 151);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.roleMsg {
+  color: #f00;
+  font-weight: 500;
+}
+
+.doc {
+  margin-left: 54px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+a {
+  color: rgb(32, 114, 180) !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+.fa-user-check {
+  color: #0c6e3f;
+}
+
+@media (max-width:767px){
+  .signInForm .form-group{
+    width: 100%;
+    float: none;
+  }
+}

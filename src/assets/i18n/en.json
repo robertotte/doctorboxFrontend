@@ -1,0 +1,70 @@
+{
+    "login": {
+         "title": "Login",
+        "placeholders": {
+            "username": "Username",
+            "password": "Password",
+            "rememberme": "Remember Me",
+            "forgotpassword": "Forgot your Password ?"
+        },
+        "validation": {
+            "username": {
+                "required": "*Username is required"
+            },
+            "password": {
+                "required": "*Password is required"
+            }
+        },
+        "loginButton":{
+          "login": "Log In",
+          "newuser":"New User?",
+          "registernow": "Register Now "
+        }
+    },
+    "SignUp": {
+        "title": "Sign Up",
+        "placeholders": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "username": "UserName",
+            "email": "Email ",
+            "password": "Password",
+            "confirm": "Confirm Password",
+            "doctor": "Doctor",
+            "patient": "Patient",
+            "Register": "Register",
+            "or": "Or",
+            "checkforAlready": "Already have an account ?",
+            "sign":"Sign In",
+            "checkemail": " Email Already Exist"
+        },
+        "validation": {
+            "password": {
+                "confirmpass": "Password must match",
+                "required": "Password is required", 
+                "passlength": "*Password must be at least 8 characters long, have at least one number, one special character and one upper case character."
+
+            },
+            "Name": {
+                "FirstName": "*First Name is required",
+                "SeconName": "Last Name is required"
+            },
+            "username": {
+                "required": "*Username is required",
+                "alreadyexist": "Username already exist!"
+            },
+            "email":{
+                "required":"Email is required"
+            }
+        }
+    },
+    "forgotpassword": {
+        "title": "Forgot your password?",
+        "message": "Enter your email address to reset your password. You may need to check your spam folder or unblock no-reply@doctorbox.com.",
+        "placeholders": {
+            "email": "Email",
+            "Submit": "Submit"
+        }
+    }
+  
+}
