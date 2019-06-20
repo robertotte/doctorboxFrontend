@@ -7,13 +7,20 @@
     "build": "ng build --prod --aot --vendor-chunk --common-chunk --delete-output-path --buildOptimizer",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --output-path angularapp  --aot --prod"
+  },
+  "engines": {
+    "node": "v10.16.0",
+    "npm": "6.9.0"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
+    "@angular/cli": "~7.2.1",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
+    "@angular/compiler-cli": "~7.2.0",
     "@angular/core": "~7.2.0",
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
@@ -23,13 +30,16 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
     "jwt-decode": "^2.2.0",
     "moment": "^2.24.0",
+    "path": "^0.12.7",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.3.3",
     "sweetalert2": "^8.12.1",
     "tslib": "^1.9.0",
+    "typescript": "~3.2.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
