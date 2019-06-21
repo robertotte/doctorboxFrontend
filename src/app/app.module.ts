@@ -14,6 +14,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { LoginComponent } from './shared/modals/login/login.component';
 import { SignupComponent } from './shared/modals/signup/signup.component';
 import { ForgotPasswordComponent } from './shared/modals/forgot-password/forgot-password.component';
+import { SubHeaderComponent } from './common/header/sub-header/sub-header.component';
 
 // ================ Services ================
 import { AccountModalService } from './core/services/account-modal.service';
@@ -44,6 +45,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HeaderComponent,
+    SubHeaderComponent,
     FooterComponent,
     LoginComponent,
     SignupComponent,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-doctorbox-landing',
@@ -8,17 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class DoctorboxLandingComponent implements OnInit {
 
-  constructor( private translateService: TranslateService) {
-    translateService.addLangs(['en', 'de']);
-    translateService.setDefaultLang('de');
-
-   }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  switchLanguage(language: string) {
-    this.translateService.use(language);
   }
 
 }

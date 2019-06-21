@@ -19,6 +19,20 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.loginCheck();
     this.roleCheck();
+    window.scroll(0, 0);
+    window.onscroll = function () { myFunction() };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+
     // console.log(this.token, this.role);
   }
 

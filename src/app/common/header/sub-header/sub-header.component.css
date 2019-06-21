@@ -1,0 +1,17 @@
+.container-fluid {
+  background-color: #0C6E3F;
+  transition: 0.3s all;
+}
+
+.select-container {
+  width: 110px;
+  padding: 5px 0;
+}
+
+.form-control {
+  height: auto;
+  padding: 0 0.75rem;
+}
+.select-container{
+  margin: 0;
+}
