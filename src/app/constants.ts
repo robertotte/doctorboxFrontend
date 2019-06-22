@@ -95,4 +95,4 @@ export class swalMessages {
     }
 }
 
-export const apiHeader = 'https://doctor-box.herokuapp.com/';
+export const apiHeader = 'https://apis-medboxx.herokuapp.com/';
