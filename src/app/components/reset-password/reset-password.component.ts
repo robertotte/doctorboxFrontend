@@ -15,11 +15,15 @@ export class ResetPasswordComponent implements OnInit {
   RestForm: FormGroup;
   passwordShowStatus: boolean = true;
 
-  constructor(private resetForm: restForm, 
-  private resetServ: RestPasswordService, private route: ActivatedRoute, private translateService: TranslateService) {
+  constructor(
+    public resetForm: restForm,
+    private resetServ: RestPasswordService,
+    private route: ActivatedRoute,
+    private translateService: TranslateService
+  ) {
     translateService.addLangs(['en', 'de']);
     translateService.setDefaultLang('de');
-   }
+  }
 
   ngOnInit() {
     this.RestForm = this.resetForm.initForm();
@@ -38,7 +42,7 @@ export class ResetPasswordComponent implements OnInit {
     this.translateService.use(language);
   }
 
-  
+
 
 
 }

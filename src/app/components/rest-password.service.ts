@@ -11,7 +11,10 @@ export class RestPasswordService {
 
   restPassword(form) {
     if (form.valid) {
-      this.http.post(apiHeader + 'user/forget_change_password', form.value)
+      this.http.post(apiHeader + 'user/forget_change_password', JSON.stringify({
+        password: form.contorls.get('newPassword').value,
+        code: form.contorls.get('code').value
+      }))
         .subscribe(
           rest => {
             this.swalMessages.successAlert(this.swalMessages.resetPassword.successTitle200, this.swalMessages.resetPassword.successMsg200);
