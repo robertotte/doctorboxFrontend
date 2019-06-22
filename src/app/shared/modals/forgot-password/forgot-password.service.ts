@@ -7,34 +7,37 @@ import { forgotForm } from 'src/app/core/modals/forgot.form';
   providedIn: 'root'
 })
 export class ForgotPasswordService {
-
-  constructor(private swalMessages: swalMessages, private http: HttpClient, private forgotForm: forgotForm) { }
+  constants: any;
+  constructor(private swalMessages: swalMessages,
+    private http: HttpClient, private forgotForm: forgotForm) {
+    this.getConstants()
+  }
 
   forgetPassword() {
     if (this.forgotForm.forgotForm.valid) {
       this.http.post(apiHeader + 'user/forget_password/', this.forgotForm.forgotForm.value).subscribe(
         (response) => {
-          this.swalMessages.successAlert(this.swalMessages.forgotPassword.accountActiveTitle200, this.swalMessages.forgotPassword.accountActiveMsg200);
+          this.swalMessages.successAlert(this.constants.forgotPassword.accountActiveTitle, this.constants.forgotPassword.accountActiveMsg);
         },
         (error) => {
           if (error.status == 404) {
-            this.swalMessages.errorAlert(this.swalMessages.forgotPassword.invalidEmailTitle404, this.swalMessages.forgotPassword.invalidEmailMsg404);
+            this.swalMessages.errorAlert(this.constants.forgotPassword.invalidEmailTitle, this.constants.forgotPassword.invalidEmailMsg);
           }
           else if (error.status == 400) {
-            this.swalMessages.errorAlert(this.swalMessages.forgotPassword.accountNotActiveTitle400, this.swalMessages.forgotPassword.accountNotActiveMsg400);
+            this.swalMessages.errorAlert(this.constants.forgotPassword.accountNotActiveTitle, this.constants.forgotPassword.accountNotActiveMsg);
           }
           else {
-            this.swalMessages.errorAlert(this.swalMessages.commonErrors.internalErrorTitle500, this.swalMessages.commonErrors.internalErrorMsg500);
+            this.swalMessages.errorAlert(this.constants.commonErrors.internalErrorTitle, this.constants.commonErrors.internalErrorMsg);
           }
         });
     }
     else {
-      this.swalMessages.warningAlert(this.swalMessages.formErrors.invalidFormTitle, this.swalMessages.formErrors.invalidFormMsg);
+      this.swalMessages.warningAlert(this.constants.formErrors.invalidFormTitle, this.constants.formErrors.invalidFormMsg);
     }
 
   }
 
-  changePassword(pass1, pass2, code) {
+  changePassword(pass1: any, pass2: any, code: any) {
     return this.http.put(apiHeader + 'change_password/',
       JSON.stringify({
         "pass1": pass1,
@@ -43,5 +46,15 @@ export class ForgotPasswordService {
       }));
   }
 
+
+  getConstants() {
+
+    return this.http.get('../assets/i18n/de.json').subscribe(data => {
+      this.constants = data;
+
+    });
+
+
+  }
 
 }

@@ -3,6 +3,7 @@ import { AccountModalService } from 'src/app/core/services/account-modal.service
 import { LoginService } from './login.service';
 import { FormGroup } from '@angular/forms';
 import { loginForm } from 'src/app/core/modals/login.form';
+import { HttpClient } from '@angular/common/http';
 
 declare const $: any;
 
@@ -15,10 +16,9 @@ export class LoginComponent implements OnInit {
   @Input('showModal') showModal: boolean;
   title: String = 'Login to Crickslab';
   login: FormGroup;
-
   passwordShowStatus: boolean = true;
   
-  constructor(private loginForm: loginForm, private loginService: LoginService, private accountModal: AccountModalService, ) { }
+  constructor(private loginForm: loginForm, private loginService: LoginService, private accountModal: AccountModalService, private http: HttpClient ) { }
 
   ngOnInit() {
     this.showHide();
@@ -57,5 +57,6 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.loginService.login();
   }
+
 
 }

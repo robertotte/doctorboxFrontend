@@ -1,6 +1,6 @@
 {
     "login": {
-         "title": "Login",
+        "title": "Login",
         "placeholders": {
             "username": "Username",
             "password": "Password",
@@ -15,10 +15,10 @@
                 "required": "*Password is required"
             }
         },
-        "loginButton":{
-          "login": "Log In",
-          "newuser":"New User?",
-          "registernow": "Register Now "
+        "loginButton": {
+            "login": "Log In",
+            "newuser": "New User?",
+            "registernow": "Register Now "
         }
     },
     "SignUp": {
@@ -35,15 +35,14 @@
             "Register": "Register",
             "or": "Or",
             "checkforAlready": "Already have an account ?",
-            "sign":"Sign In",
+            "sign": "Sign In",
             "checkemail": " Email Already Exist"
         },
         "validation": {
             "password": {
                 "confirmpass": "Password must match",
-                "required": "Password is required", 
+                "required": "Password is required",
                 "passlength": "*Password must be at least 8 characters long, have at least one number, one special character and one upper case character."
-
             },
             "Name": {
                 "FirstName": "*First Name is required",
@@ -53,8 +52,8 @@
                 "required": "*Username is required",
                 "alreadyexist": "Username already exist!"
             },
-            "email":{
-                "required":"Email is required"
+            "email": {
+                "required": "Email is required"
             }
         }
     },
@@ -65,6 +64,70 @@
             "email": "Email",
             "Submit": "Submit"
         }
+    },
+    "loginStatus": {
+        "success": "Welcome to MedBox",
+        "invalid": "Username or password is invalid"
+    },
+    "loginAuth": {
+        "inalidUser401": "invalid user",
+        "accountNotActive400": "account not active",
+        "invalidusernameorpassword404": "invalid user name or password"
+    },
+    "formErrors": {
+        "invalidFormMsg": "Please enter required form fields.",
+        "invalidFormTitle": "Invalid form"
+    },
+    "commonErrors": {
+        "internalErrorMsg": "Server under maintenance, sorry for inconvenience.",
+        "internalErrorTitle": "Internal Server Error"
+    },
+    "signupStatus": {
+        "activationMailMsg": "Please check your email for account activation instructions.",
+        "activationMailTitle": "Activation mail sent",
+        "userOrEmailExistMsg": "Username or email already exist",
+        "userOrEmailExistTitle": "Already exist",
+        "passwordTitle": "Password pattren",
+        "passwordMsg": "Password must be at least 8 characters long, have at least one number, one special character and one upper case character."
+    },
+    "emailVerify": {
+        "unverifiedEmailMsg": "Please first verify your email address to login.",
+        "unverifiedEmailTitle": "Unverified Email",
+        "unregisteredEmailMsg": "Please first register your email address to login.",
+        "unregisteredEmailTitle": "Unregistered Email"
+    },
+    "forgotPassword": {
+        "invalidEmailTitle": "User does not exist",
+        "invalidEmailMsg": "Please enter a registered email address.",
+        "accountNotActiveTitle": "Account not active",
+        "accountNotActiveMsg": "Please check your registed email address for account activation.",
+        "accountActiveTitle": "Password reset mail sent",
+        "accountActiveMsg": "Please check your registed email address for password reset instructions."
+    },
+    "accountActivation": {
+        "accountVerified": "Your account is verified!",
+        "accountAlreadyVerified": "Your account has already been activated!",
+        "invalidAccount": "Your account is invalid"
+    },
+    "logout": {
+        "Title": "MedBox",
+        "Msg": "Thanks for visiting us"
+    },
+    "resetPassword": {
+        "title": "Reset Your Password",
+        "newPassword": "New Password",
+        "required": "*Password required!",
+        "confirmpass": "Confirm Password",
+        "matchpass": " *Password must match.",
+        "confirmpassrequired": "*Confirm password required!",
+        "reset": "reset"
+    },
+    "pageNotFound": {
+        "OOPS": "Oops!",
+        "Somethingwentwrong": "Something went wrong.",
+        "notFound": "We can't find the page you're looking for.",
+        "Visit": "Visit our",
+        "support": "Support Page",
+        "anyquestions": "for any questions."
     }
-  
 }

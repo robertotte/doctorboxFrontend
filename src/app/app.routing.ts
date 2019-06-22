@@ -1,5 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
-import { } from './components/account-activation/account-activation.module'
+// import { } from './components/reset-password/reset-password.module'
+
 const APP_ROUTES: Routes = [
   {
     path: '',
@@ -9,6 +10,11 @@ const APP_ROUTES: Routes = [
   {
     path: 'account-activation/:code',
     loadChildren: './components/account-activation/account-activation.module#AccountActivationModule'
+  },
+
+  {
+    path: 'rest-password/:code',
+    loadChildren: './components/reset-password/reset-password.module#ResetPasswordModule'
   },
 
   // Page Not Found

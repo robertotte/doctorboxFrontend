@@ -4,16 +4,25 @@ export class swalMessages {
 
     commonErrors = {
         internalErrorMsg500: 'Server under maintenance, sorry for inconvenience.',
-        internalErrorTitle500: 'Internal Server Error'
+        internalErrorTitle500: 'Internal Server Error',
+
+        passwordFormatTitle: 'Password pattren',
+        passwordFormatMsg: 'Password must be at least 8 characters long, have at least one number, one special character and one upper case character.',
+
+        unregisteredEmailTitle: 'Unregistered Email',
+        unregisteredEmailMsg: 'Please first register your email address to login.',
+
+        unverifiedEmailMsg: 'Please first verify your email address to login.',
+        unverifiedEmailTitle: 'Unverified Email',
     }
 
     formErrors = {
-        invalidFormMsg: 'Please enter required form fields.',
-        invalidFormTitle: 'Invalid form'
+        invalidFormTitle: 'Invalid form',
+        invalidFormMsg: 'Please enter required form fields.'
     }
 
     loginAuth = {
-        invalidUser401: 'Please first register your email address to login.',
+        invalidUser401: this.commonErrors.unregisteredEmailMsg,
         accountNotActive400: 'Please first verify your email address to login.',
         invalidusernameorpassword404: 'invalid user name or password'
     }
@@ -30,16 +39,16 @@ export class swalMessages {
         userOrEmailExistMsg404: 'Username or email already exist',
         userOrEmailExistTitle404: 'Already exist',
 
-        passwordTitle400: 'Password pattren',
-        passwordMsg400: 'Password must be at least 8 characters long, have at least one number, one special character and one upper case character.',
+        passwordTitle400: this.commonErrors.passwordFormatTitle,
+        passwordMsg400: this.commonErrors.passwordFormatMsg,
     }
 
     emailVerify = {
-        unverifiedEmailMsg: 'Please first verify your email address to login.',
-        unverifiedEmailTitle: 'Unverified Email',
+        unverifiedEmailTitle: this.commonErrors.unverifiedEmailTitle,
+        unverifiedEmailMsg: this.commonErrors.unverifiedEmailMsg,
 
-        unregisteredEmailMsg: 'Please first register your email address to login.',
-        unregisteredEmailTitle: 'Unregistered Email'
+        unregisteredEmailTitle: this.commonErrors.unregisteredEmailTitle,
+        unregisteredEmailMsg: this.commonErrors.unregisteredEmailMsg,
     }
 
     forgotPassword = {
@@ -60,8 +69,19 @@ export class swalMessages {
     }
 
     logout = {
-        Title: 'MedBoxx',
+        Title: 'DoctorBox',
         Msg: 'Thanks for visiting us'
+    }
+
+    resetPassword = {
+        successTitle200: 'MedBoxx',
+        successMsg200: 'Password reset',
+
+        invalidcodeTitle404: 'Invalid',
+        invalidcodeMsg404: 'Invalid code',
+
+        invalidpasswordformatTitle400: 'Invalid',
+        invalidpasswordformatMsg400: 'Invalid password format'
     }
 
     successAlert(title, text) {

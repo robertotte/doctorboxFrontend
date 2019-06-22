@@ -2,10 +2,8 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { apiHeader, swalMessages } from '../../../constants';
 import { HttpClient } from '@angular/common/http';
 import * as jwt_decode from "jwt-decode";
-import * as moment from 'moment';
 import { loginForm } from 'src/app/core/modals/login.form';
-import { LoggedInUser } from './loggedin-user.modal';
-import { TranslateService } from '@ngx-translate/core';
+
 
 declare const $: any;
 
@@ -16,9 +14,14 @@ export class LoginService {
 
   time: Date;
   exp_time;
+  constants: any;
 
-  constructor(private http: HttpClient, private swalMessages: swalMessages, 
-  private loginForm: loginForm ,private translate: TranslateService) { }
+
+  constructor(private http: HttpClient, private swalMessages: swalMessages,
+    private loginForm: loginForm) {
+    this.getConstants();
+
+  }
 
   // --------------- using methods
 
@@ -33,28 +36,28 @@ export class LoginService {
               localStorage.setItem('DecodedToken', decodedToken)
               localStorage.setItem('Token', JSON.stringify(data['token']));
 
-              this.swalMessages.successAlert(this.swalMessages.loginStatus.success200, '');
-              $('#login').modal('hide');
+              this.swalMessages.successAlert(this.constants.loginStatus.success, '');           
+               $('#login').modal('hide');
             },
             error => {
               if (error.status == 400)
-                this.swalMessages.errorAlert(this.swalMessages.loginStatus.invalid400, '');
+                this.swalMessages.errorAlert(this.constants.loginStatus.invalid, '');
             });
       },
         error => {
           if (error.status == 401) {
-            this.swalMessages.errorAlert(this.swalMessages.loginAuth.invalidUser401, '');
+            this.swalMessages.errorAlert(this.constants.loginAuth.inalidUser401, '');
           }
           else if (error.status == 400) {
-            this.swalMessages.errorAlert(this.swalMessages.loginAuth.accountNotActive400, '');
+            this.swalMessages.errorAlert(this.constants.loginAuth.accountNotActive400, '');
           }
           else if (error.status == 404) {
-            this.swalMessages.errorAlert(this.swalMessages.loginAuth.invalidusernameorpassword404, '');
+            this.swalMessages.errorAlert(this.constants.loginAuth.invalidusernameorpassword404, '');
           }
         });
     }
     else {
-      this.swalMessages.warningAlert(this.swalMessages.formErrors.invalidFormTitle, this.swalMessages.formErrors.invalidFormMsg);
+      this.swalMessages.warningAlert(this.constants.formErrors.invalidFormTitle, this.constants.formErrors.invalidFormMsg);
     }
   }
 
@@ -75,9 +78,16 @@ export class LoginService {
 
   logout() {
     localStorage.clear();
-    this.swalMessages.successAlert(this.swalMessages.logout.Title, this.swalMessages.logout.Msg);
+    this.swalMessages.successAlert(this.constants.logout.Title, this.constants.logout.Msg);
   }
-  // --------------- End
 
+  getConstants() {
+
+    return this.http.get('../assets/i18n/de.json').subscribe(data => {
+      this.constants = data;
+    });
+
+
+  }
 }
 

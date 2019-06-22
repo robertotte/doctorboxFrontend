@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-page404',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page404Component implements OnInit {
 
-  constructor() { }
+  constructor( private translateService: TranslateService) { 
+
+    translateService.addLangs(['en', 'de']);
+    translateService.setDefaultLang('de');
+  }
 
   ngOnInit() {
     window.scroll(0, 0);
