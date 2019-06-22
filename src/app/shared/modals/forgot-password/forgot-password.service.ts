@@ -14,17 +14,17 @@ export class ForgotPasswordService {
     if (this.forgotForm.forgotForm.valid) {
       this.http.post(apiHeader + 'user/forget_password/', this.forgotForm.forgotForm.value).subscribe(
         (response) => {
-          this.swalMessages.successAlert(this.swalMessages.forgotPassword.accountActiveTitle, this.swalMessages.forgotPassword.accountActiveMsg);
+          this.swalMessages.successAlert(this.swalMessages.forgotPassword.accountActiveTitle200, this.swalMessages.forgotPassword.accountActiveMsg200);
         },
         (error) => {
           if (error.status == 404) {
-            this.swalMessages.errorAlert(this.swalMessages.forgotPassword.invalidEmailTitle, this.swalMessages.forgotPassword.invalidEmailMsg);
+            this.swalMessages.errorAlert(this.swalMessages.forgotPassword.invalidEmailTitle404, this.swalMessages.forgotPassword.invalidEmailMsg404);
           }
           else if (error.status == 400) {
-            this.swalMessages.errorAlert(this.swalMessages.forgotPassword.accountNotActiveTitle, this.swalMessages.forgotPassword.accountNotActiveMsg);
+            this.swalMessages.errorAlert(this.swalMessages.forgotPassword.accountNotActiveTitle400, this.swalMessages.forgotPassword.accountNotActiveMsg400);
           }
           else {
-            this.swalMessages.errorAlert(this.swalMessages.commonErrors.internalErrorTitle, this.swalMessages.commonErrors.internalErrorMsg);
+            this.swalMessages.errorAlert(this.swalMessages.commonErrors.internalErrorTitle500, this.swalMessages.commonErrors.internalErrorMsg500);
           }
         });
     }

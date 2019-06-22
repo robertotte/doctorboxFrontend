@@ -3,8 +3,8 @@ import swal from 'sweetalert2';
 export class swalMessages {
 
     commonErrors = {
-        internalErrorMsg: 'Server under maintenance, sorry for inconvenience.',
-        internalErrorTitle: 'Internal Server Error'
+        internalErrorMsg500: 'Server under maintenance, sorry for inconvenience.',
+        internalErrorTitle500: 'Internal Server Error'
     }
 
     formErrors = {
@@ -13,25 +13,25 @@ export class swalMessages {
     }
 
     loginAuth = {
-        inalidUser401: 'inalid user',
-        accountNotActive400: 'account not active',
+        invalidUser401: 'Please first register your email address to login.',
+        accountNotActive400: 'Please first verify your email address to login.',
         invalidusernameorpassword404: 'invalid user name or password'
     }
 
     loginStatus = {
-        success: 'Welcome to Doctor Box',
-        invalid: 'Username or password is invalid'
+        success200: 'Welcome to MedBox',
+        invalid400: 'Username or password is invalid'
     }
 
     signupStatus = {
-        activationMailMsg: 'Please check your email for account activation instructions.',
-        activationMailTitle: 'Activation mail sent',
+        activationMailMsg200: 'Please check your email for account activation instructions.',
+        activationMailTitle200: 'Activation mail sent',
 
-        userOrEmailExistMsg: 'Username or email already exist',
-        userOrEmailExistTitle: 'Already exist',
+        userOrEmailExistMsg404: 'Username or email already exist',
+        userOrEmailExistTitle404: 'Already exist',
 
-        passwordTitle: 'Password pattren',
-        passwordMsg: 'Password must be at least 8 characters long, have at least one number, one special character and one upper case character.',
+        passwordTitle400: 'Password pattren',
+        passwordMsg400: 'Password must be at least 8 characters long, have at least one number, one special character and one upper case character.',
     }
 
     emailVerify = {
@@ -43,24 +43,24 @@ export class swalMessages {
     }
 
     forgotPassword = {
-        invalidEmailTitle: 'User does not exist',
-        invalidEmailMsg: 'Please enter a registered email address.',
+        invalidEmailTitle404: 'User does not exist',
+        invalidEmailMsg404: 'Please enter a registered email address.',
 
-        accountNotActiveTitle: 'Account not active',
-        accountNotActiveMsg: 'Please check your registed email address for account activation.',
+        accountNotActiveTitle400: 'Account not active',
+        accountNotActiveMsg400: 'Please check your registed email address for account activation.',
 
-        accountActiveTitle: 'Password reset mail sent',
-        accountActiveMsg: 'Please check your registed email address for password reset instructions.'
+        accountActiveTitle200: 'Password reset mail sent',
+        accountActiveMsg200: 'Please check your registed email address for password reset instructions.'
     }
 
     accountActivation = {
-        accountVerified: 'Your account is verified!',
-        InvalidAccount: 'No account found!',
-        accountAlreadyVerified: 'Your account has already been activated!'
+        accountVerified200: 'Your account is verified!',
+        InvalidAccount400: 'No account found!',
+        accountAlreadyVerified404: 'Your account has already been activated!'
     }
 
     logout = {
-        Title: 'DoctorBox',
+        Title: 'MedBoxx',
         Msg: 'Thanks for visiting us'
     }
 

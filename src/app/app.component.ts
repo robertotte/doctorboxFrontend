@@ -9,7 +9,6 @@ declare const $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'doctorbox';
   accountModals: any = {
     login: false,
     signup: false,
@@ -18,7 +17,7 @@ export class AppComponent {
 
   constructor(
     private accountModal: AccountModalService,
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.accountModal.isModalCalled.subscribe(isCalled => {
@@ -31,7 +30,7 @@ export class AppComponent {
       if (modal === 'signup') {
         this.accountModals.signup = true;
         $('#signUp').modal();
-      } 
+      }
       else if (modal === 'login') {
         $('#login').modal();
         this.accountModals.login = true;

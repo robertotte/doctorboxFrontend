@@ -16,20 +16,20 @@ export class SignupService {
       this.http.post(apiHeader + "user/user_register/", this.signupForm.signupForm.value, { headers: this.authInterceptor.setHeaders() })
         .subscribe(
           data => {
-            this.swalMessages.successAlert(this.swalMessages.signupStatus.activationMailTitle, this.swalMessages.signupStatus.activationMailMsg);
+            this.swalMessages.successAlert(this.swalMessages.signupStatus.activationMailTitle200, this.swalMessages.signupStatus.activationMailMsg200);
           },
           error => {
             if (error.status == 404) {
-              this.swalMessages.warningAlert(this.swalMessages.signupStatus.userOrEmailExistTitle, this.swalMessages.signupStatus.userOrEmailExistMsg);
+              this.swalMessages.warningAlert(this.swalMessages.signupStatus.userOrEmailExistTitle404, this.swalMessages.signupStatus.userOrEmailExistMsg404);
             }
             else if (error.status == 403) {
-              this.swalMessages.errorAlert(this.swalMessages.commonErrors.internalErrorTitle, this.swalMessages.commonErrors.internalErrorMsg);
+              this.swalMessages.errorAlert(this.swalMessages.commonErrors.internalErrorTitle500, this.swalMessages.commonErrors.internalErrorMsg500);
             }
             else if (error.status == 400) {
-              this.swalMessages.errorAlert(this.swalMessages.signupStatus.passwordTitle, this.swalMessages.signupStatus.passwordMsg);
+              this.swalMessages.errorAlert(this.swalMessages.signupStatus.passwordTitle400, this.swalMessages.signupStatus.passwordMsg400);
             }
             else if (error.status == 500) {
-              this.swalMessages.errorAlert(this.swalMessages.commonErrors.internalErrorTitle, this.swalMessages.commonErrors.internalErrorMsg);
+              this.swalMessages.errorAlert(this.swalMessages.commonErrors.internalErrorTitle500, this.swalMessages.commonErrors.internalErrorMsg500);
             }
           });
     }

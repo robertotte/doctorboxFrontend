@@ -5,6 +5,7 @@ import * as jwt_decode from "jwt-decode";
 import * as moment from 'moment';
 import { loginForm } from 'src/app/core/modals/login.form';
 import { LoggedInUser } from './loggedin-user.modal';
+import { TranslateService } from '@ngx-translate/core';
 
 declare const $: any;
 
@@ -16,7 +17,8 @@ export class LoginService {
   time: Date;
   exp_time;
 
-  constructor(private http: HttpClient, private swalMessages: swalMessages, private loginForm: loginForm) { }
+  constructor(private http: HttpClient, private swalMessages: swalMessages, 
+  private loginForm: loginForm ,private translate: TranslateService) { }
 
   // --------------- using methods
 
@@ -31,17 +33,17 @@ export class LoginService {
               localStorage.setItem('DecodedToken', decodedToken)
               localStorage.setItem('Token', JSON.stringify(data['token']));
 
-              this.swalMessages.successAlert(this.swalMessages.loginStatus.success, '');
+              this.swalMessages.successAlert(this.swalMessages.loginStatus.success200, '');
               $('#login').modal('hide');
             },
             error => {
               if (error.status == 400)
-                this.swalMessages.errorAlert(this.swalMessages.loginStatus.invalid, '');
+                this.swalMessages.errorAlert(this.swalMessages.loginStatus.invalid400, '');
             });
       },
         error => {
           if (error.status == 401) {
-            this.swalMessages.errorAlert(this.swalMessages.loginAuth.inalidUser401, '');
+            this.swalMessages.errorAlert(this.swalMessages.loginAuth.invalidUser401, '');
           }
           else if (error.status == 400) {
             this.swalMessages.errorAlert(this.swalMessages.loginAuth.accountNotActive400, '');

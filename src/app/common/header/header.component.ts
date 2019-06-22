@@ -12,7 +12,6 @@ declare const $: any;
 export class HeaderComponent implements OnInit {
 
   token;
-  role ;
 
   constructor(private accountModal: AccountModalService, private loginService: LoginService) { }
 
@@ -32,8 +31,6 @@ export class HeaderComponent implements OnInit {
         header.classList.remove("sticky");
       }
     }
-
-    // console.log(this.token, this.role);
   }
 
   triggerLoginModal() {
@@ -57,8 +54,8 @@ export class HeaderComponent implements OnInit {
   }
 
   roleCheck() {
-    if (localStorage.getItem('role')) {
-      this.role = localStorage.getItem('role');
+    let role = localStorage.getItem('role');
+    if (role == 'true') {
       return true;
     } else {
       return false;
