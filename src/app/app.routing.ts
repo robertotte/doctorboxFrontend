@@ -13,7 +13,7 @@ const APP_ROUTES: Routes = [
   },
 
   {
-    path: 'rest-password/:code',
+    path: 'reset-password/:code',
     loadChildren: './components/reset-password/reset-password.module#ResetPasswordModule'
   },
 
