@@ -64,6 +64,17 @@ export class swalMessages {
         Msg: 'Thanks for visiting us'
     }
 
+    resetPassword = {
+        successTitle200: 'MedBox',
+        successMsg200: 'Password reset',
+
+        invalidcodeTitle404: 'Invalid',
+        invalidcodeMsg404: 'Invalid code',
+
+        invalidpasswordformatTitle400: 'Invalid',
+        invalidpasswordformatMsg400: 'Invalid password format'
+    }
+
     successAlert(title, text) {
         swal.fire({
             type: 'success',
