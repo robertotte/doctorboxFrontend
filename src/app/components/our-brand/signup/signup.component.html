@@ -73,7 +73,7 @@
                 <div class="form-group mb-2">
                   <label>{{'login.placeholders.password' | translate}}</label>
                   <input [type]="passwordShowStatus ? 'password' : 'text'" formControlName="password"
-                    class="form-control round-corner">
+                    class="form-control round-corner" placeholder="{{'login.placeholders.password' | translate}}">
                   <div class="text-danger"
                     *ngIf="signupForm.controls.password.touched && signupForm.controls.password.invalid">
                     <div *ngIf="signupForm.controls.password.errors.required">{{'login.validation.password.required' | translate}}</div>
