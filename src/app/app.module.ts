@@ -9,18 +9,14 @@ import { routing } from './app.routing';
 // ================ Components ================
 import { AppComponent } from './app.component';
 
-import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
-import { LoginComponent } from './shared/modals/login/login.component';
-import { SignupComponent } from './shared/modals/signup/signup.component';
-import { ForgotPasswordComponent } from './shared/modals/forgot-password/forgot-password.component';
-import { SubHeaderComponent } from './common/header/sub-header/sub-header.component';
+
 
 // ================ Services ================
 import { AccountModalService } from './core/services/account-modal.service';
-import { ForgotPasswordService } from './shared/modals/forgot-password/forgot-password.service';
-import { LoginService } from './shared/modals/login/login.service';
-import { SignupService } from './shared/modals/signup/signup.service';
+import { ForgotPasswordService } from './components/our-brand/forgot-password/forgot-password.service';
+import { LoginService } from './components/our-brand/login/login.service';
+import { SignupService } from './components/our-brand/signup/signup.service';
 import { AuthGuard } from './AuthGuards/auth.guard';
 import { AuthLogin } from './AuthGuards/auth.login';
 import { AuthInterceptor, SetHeaders } from './AuthGuards/auth.interceptor';
@@ -36,6 +32,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SharedModule } from './shared/shared.module';
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -44,12 +41,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SubHeaderComponent,
-    FooterComponent,
-    LoginComponent,
-    SignupComponent,
-    ForgotPasswordComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +49,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    SharedModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

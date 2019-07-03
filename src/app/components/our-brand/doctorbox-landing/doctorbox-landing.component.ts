@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-doctorbox-landing',
@@ -7,22 +7,34 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./doctorbox-landing.component.css']
 })
 export class DoctorboxLandingComponent implements OnInit {
-  constants: any;
 
-  constructor(private http: HttpClient) { }
+  eng: any;
+  germen: any;
+
+  constructor(private translateService: TranslateService) {
+    translateService.addLangs(['en', 'de']);
+    translateService.setDefaultLang('de');
+  }
 
   ngOnInit() {
-    this.getConstants();
   }
 
 
-  getConstants() {
 
-    return this.http.get('../assets/i18n/en.json').subscribe( data => {
-       this.constants = data;
-    });
+  onChangeEnglish(event: any) {
+   this.eng = event;
+    console.log(event.login.title);
 
 
- }
+
+  }
+
+  onChangeGermen(event: any) {
+  this.germen= event;
+    console.log(event);
+
+
+
+  }
 
 }

@@ -1,25 +1,8 @@
-<app-header></app-header>
 
 <main>
-
   <router-outlet></router-outlet>
   <!-- <toaster-container></toaster-container> -->
 
 </main>
 
 <app-footer></app-footer>
-
-<app-login 
-*ngIf="accountModals.login" 
-[showModal]="accountModals.login">
-</app-login>
-
-<app-signup 
-*ngIf="accountModals.signup"
- [showModal]="accountModals.signup">
-</app-signup>
-
-<app-forgot-password 
-*ngIf="accountModals.forgotPassword" 
-[showModal]="accountModals.forgotPassword">
-</app-forgot-password>

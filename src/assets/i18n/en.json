@@ -24,19 +24,19 @@
     "SignUp": {
         "title": "Sign Up",
         "placeholders": {
-            "firstName": "First Name",
-            "lastName": "Last Name",
-            "username": "UserName",
+            "firstName": "First name",
+            "lastName": "Last name",
+            "username": "Username",
             "email": "Email ",
             "password": "Password",
-            "confirm": "Confirm Password",
+            "confirm": "Confirm password",
             "doctor": "Doctor",
             "patient": "Patient",
             "Register": "Register",
             "or": "Or",
             "checkforAlready": "Already have an account ?",
-            "sign": "Sign In",
-            "checkemail": " Email Already Exist"
+            "sign": "Signin",
+            "checkemail": " Email already exist"
         },
         "validation": {
             "password": {
@@ -45,8 +45,8 @@
                 "passlength": "*Password must be at least 8 characters long, have at least one number, one special character and one upper case character."
             },
             "Name": {
-                "FirstName": "*First Name is required",
-                "SeconName": "Last Name is required"
+                "FirstName": "*First name is required",
+                "SeconName": "Last name is required"
             },
             "username": {
                 "required": "*Username is required",
@@ -114,20 +114,20 @@
         "Msg": "Thanks for visiting us"
     },
     "resetPassword": {
-        "title": "Reset Your Password",
-        "newPassword": "New Password",
+        "title": "Reset your password",
+        "newPassword": "New password",
         "required": "*Password required!",
-        "confirmpass": "Confirm Password",
+        "confirmpass": "Confirm password",
         "matchpass": " *Password must match.",
         "confirmpassrequired": "*Confirm password required!",
-        "reset": "reset"
+        "reset": "Reset"
     },
     "pageNotFound": {
         "OOPS": "Oops!",
         "Somethingwentwrong": "Something went wrong.",
         "notFound": "We can't find the page you're looking for.",
         "Visit": "Visit our",
-        "support": "Support Page",
+        "support": "Support page",
         "anyquestions": "for any questions."
     }
 }
