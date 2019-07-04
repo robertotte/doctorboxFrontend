@@ -1,54 +1,62 @@
-.modalClose {
-    position: absolute;
-    top: -15px;
-    right: 0%;
-    cursor: pointer;
-    z-index: 9;
-    border-radius: 10rem;
-    background: white;
-    padding: 5px;
+/* i {
+  color: #c00;
+  font-size: 20px;
 }
-    i {
-      color: #c00;
-      font-size : 20px;
-}
+
 .modal-dialog {
   color: #333;
   max-width: 400px;
 }
-.modal-title{
+
+.modal-header {
+  padding: 5px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.modal-title {
   margin: 0 auto;
   color: #0c6e3f;
   font-size: 1.5rem;
 }
-label{
+
+label {
   font-size: 16px;
   color: #333;
   margin-bottom: 1px !important;
 }
+
 div#kc-form-options {
   display: inline-block;
   margin-top: 10px;
   font-size: 1rem;
 }
+
 input[type=checkbox] {
   margin-right: .5rem;
 }
+
 div#kc-form-options+div {
   font-size: 1rem;
   margin-bottom: 10px;
 }
-.pd-0-30{
+
+.pd-0-30 {
   padding: 0 30px;
 }
-.btn{
+
+.btn {
   border: 1px solid #2e6d4a;
   cursor: pointer;
   background: #2e6d4a !important;
 }
+
 a {
-  color: rgb(32, 114, 180) ;
+  color: rgb(32, 114, 180);
 }
+
 a:hover {
- text-decoration: underline;
-}
+  text-decoration: underline;
+} */

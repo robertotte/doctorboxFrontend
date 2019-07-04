@@ -1,0 +1,76 @@
+::ng-deep .modal-dialog i {
+  color: #c00;
+  font-size: 16px;
+}
+
+::ng-deep .modal-dialog {
+  color: #333;
+  max-width: 400px;
+}
+
+::ng-deep .modal-header {
+  padding: 5px 0;
+}
+
+::ng-deep .modal-dialog p {
+  margin: 0;
+}
+
+::ng-deep .modal-dialog .modal-title {
+  margin: 0 auto;
+  color: #0c6e3f;
+  font-size: 1.5rem;
+}
+
+::ng-deep .modal-dialog label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1px !important;
+}
+
+::ng-deep .modal-dialog div#kc-form-options {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+::ng-deep .modal-dialog input[type=checkbox] {
+  margin-right: .5rem;
+}
+
+::ng-deep .modal-dialog div#kc-form-options+div {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+::ng-deep .modal-dialog .pd-0-30 {
+  padding: 0 30px;
+}
+
+::ng-deep .modal-dialog .btn {
+  border: 1px solid #2e6d4a;
+  cursor: pointer;
+  background: #2e6d4a !important;
+  color: #fff !important;
+}
+
+::ng-deep .modal-dialog a {
+  color: rgb(32, 114, 180);
+}
+
+::ng-deep .modal-dialog a:hover {
+  text-decoration: underline;
+}
+
+::ng-deep .modal-dialog .row {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-body ::ng-deep .btn {
+  border: 1px solid #2e6d4a;
+  cursor: pointer;
+  background: #2e6d4a !important;
+  width: auto;
+  margin: 0 auto;
+}

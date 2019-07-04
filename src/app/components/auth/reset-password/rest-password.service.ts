@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { apiHeader, swalMessages } from '../constants';
+import { apiHeader, swalMessages } from '../../../constants';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +10,12 @@ export class RestPasswordService {
 
   constructor(private http: HttpClient, private swalMessages: swalMessages) { }
 
-  restPassword(form) {
+  resetPassword(form) {
+    console.log(form.value.code);
     if (form.valid) {
       this.http.post(apiHeader + 'user/forget_change_password', JSON.stringify({
-        password: form.contorls.get('newPassword').value,
-        code: form.contorls.get('code').value
+        password: form.value.newPassword,
+        code: form.value.code
       }))
         .subscribe(
           rest => {

@@ -16,13 +16,13 @@
             }
         },
         "loginButton": {
-            "login": "Log In",
+            "login": "Login",
             "newuser": "New User?",
             "registernow": "Register Now "
         }
     },
     "SignUp": {
-        "title": "Sign Up",
+        "title": "Signup",
         "placeholders": {
             "firstName": "First name",
             "lastName": "Last name",
@@ -70,9 +70,9 @@
         "invalid": "Username or password is invalid"
     },
     "loginAuth": {
-        "inalidUser401": "invalid user",
-        "accountNotActive400": "account not active",
-        "invalidusernameorpassword404": "invalid user name or password"
+        "inalidUser401": "Invalid user",
+        "accountNotActive400": "Account not active",
+        "invalidusernameorpassword404": "Invalid username or password"
     },
     "formErrors": {
         "invalidFormMsg": "Please enter required form fields.",
@@ -92,9 +92,9 @@
     },
     "emailVerify": {
         "unverifiedEmailMsg": "Please first verify your email address to login.",
-        "unverifiedEmailTitle": "Unverified Email",
+        "unverifiedEmailTitle": "Unverified email",
         "unregisteredEmailMsg": "Please first register your email address to login.",
-        "unregisteredEmailTitle": "Unregistered Email"
+        "unregisteredEmailTitle": "Unregistered email"
     },
     "forgotPassword": {
         "invalidEmailTitle": "User does not exist",

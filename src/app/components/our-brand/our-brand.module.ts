@@ -11,13 +11,13 @@ import { HttpClient } from '@angular/common/http';
 
 
 import { Page404Component } from './page404/page404.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { AccountActivationComponent } from './account-activation/account-activation.component';
+import { ResetPasswordComponent } from '../auth/reset-password/reset-password.component';
+import { AccountActivationComponent } from '../auth/account-activation/account-activation.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { RouterModule } from '@angular/router';
+import { LoginComponent } from '../auth/login/login.component';
+import { SignupComponent } from '../auth/signup/signup.component';
+import { ForgotPasswordComponent } from '../auth/forgot-password/forgot-password.component';
+import { AuthModalComponent } from '../auth/auth-modal/auth-modal.component';
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -28,7 +28,6 @@ export function translateHttpLoaderFactory(http: HttpClient) {
   imports: [
     ourBrandRouting,
     SharedModule,
-    RouterModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -46,6 +45,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     SignupComponent,
     ForgotPasswordComponent,
+    AuthModalComponent
   ]
 })
 export class OurBrandModule { }

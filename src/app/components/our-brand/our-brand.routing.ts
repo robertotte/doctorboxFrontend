@@ -2,11 +2,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { OurBrandComponent } from './our-brand.component';
 import { DoctorboxLandingComponent } from './doctorbox-landing/doctorbox-landing.component';
 import { Page404Component } from './page404/page404.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { AccountActivationComponent } from './account-activation/account-activation.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from '../auth/reset-password/reset-password.component';
+import { AccountActivationComponent } from '../auth/account-activation/account-activation.component';
+import { LoginComponent } from '../auth/login/login.component';
+import { SignupComponent } from '../auth/signup/signup.component';
+import { ForgotPasswordComponent } from '../auth/forgot-password/forgot-password.component';
 
 
 const OURBRAND_ROUTES: Routes = [

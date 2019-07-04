@@ -15,7 +15,7 @@ export class ResetPasswordComponent implements OnInit {
   passwordShowStatus: boolean = true;
 
   constructor(
-    private resetServ: RestPasswordService,
+    public resetServ: RestPasswordService,
     private route: ActivatedRoute, private fb: FormBuilder,
     private translateService: TranslateService) {
     translateService.addLangs(['en', 'de']);
@@ -35,9 +35,7 @@ export class ResetPasswordComponent implements OnInit {
       newPassword: ['', Validators.compose([Validators.required])],
       confirmPassword: ['', Validators.compose([Validators.required])],
       code: ''
-    })
-
-
+    });
   }
 
   get newPassword() {
@@ -46,11 +44,6 @@ export class ResetPasswordComponent implements OnInit {
 
   get confirmPassword() {
     return this.resetForm.get('confirmPassword');
-  }
-
-
-  resetPassword() {
-    this.resetServ.restPassword(this.resetForm);
   }
 
 

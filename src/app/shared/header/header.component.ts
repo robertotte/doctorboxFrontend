@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountModalService } from 'src/app/core/services/account-modal.service';
-import { LoginService } from 'src/app/components/our-brand/login/login.service';
+import { LoginService } from 'src/app/components/auth/login/login.service';
 import { Router } from '@angular/router';
 
 declare const $: any;

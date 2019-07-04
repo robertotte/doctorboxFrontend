@@ -14,9 +14,9 @@ import { FooterComponent } from './common/footer/footer.component';
 
 // ================ Services ================
 import { AccountModalService } from './core/services/account-modal.service';
-import { ForgotPasswordService } from './components/our-brand/forgot-password/forgot-password.service';
-import { LoginService } from './components/our-brand/login/login.service';
-import { SignupService } from './components/our-brand/signup/signup.service';
+import { ForgotPasswordService } from './components/auth/forgot-password/forgot-password.service';
+import { LoginService } from './components/auth/login/login.service';
+import { SignupService } from './components/auth/signup/signup.service';
 import { AuthGuard } from './AuthGuards/auth.guard';
 import { AuthLogin } from './AuthGuards/auth.login';
 import { AuthInterceptor, SetHeaders } from './AuthGuards/auth.interceptor';

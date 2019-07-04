@@ -23,17 +23,14 @@ a {
 .position-relative {
   position: relative !important;
 }
-
 .text-danger {
   font-size: 12px;
   font-weight: 600;
 }
-
 .fa-eye-slash,
 .fa-eye {
   cursor: pointer;
 }
-
 .position-relative i {
   position: absolute;
   right: 5px;
