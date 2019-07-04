@@ -5,7 +5,7 @@ import {
   Validators,
   EmailValidator
 } from '@angular/forms';
-import { forgotForm } from 'src/app/core/modals/forgot.form';
+import { ForgotForm } from 'src/app/core/modals/forgot.form';
 import { ForgotPasswordService } from './forgot-password.service';
 
 
@@ -20,7 +20,7 @@ export class ForgotPasswordComponent implements OnInit {
 
   forgotForm: FormGroup;
   
-  constructor(private forgotFormServ: forgotForm, private forgotServ: ForgotPasswordService) { }
+  constructor(private forgotFormServ: ForgotForm, private forgotServ: ForgotPasswordService) { }
 
   ngOnInit() {
     this.forgotForm = this.forgotFormServ.forgotForm;

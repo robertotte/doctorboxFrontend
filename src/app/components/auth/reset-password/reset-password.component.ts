@@ -16,7 +16,8 @@ export class ResetPasswordComponent implements OnInit {
 
   constructor(
     public resetServ: RestPasswordService,
-    private route: ActivatedRoute, private fb: FormBuilder,
+    private route: ActivatedRoute, 
+    private fb: FormBuilder,
     private translateService: TranslateService) {
     translateService.addLangs(['en', 'de']);
     translateService.setDefaultLang('de');

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { forgotForm } from 'src/app/core/modals/forgot.form';
+import { ForgotForm } from 'src/app/core/modals/forgot.form';
 import { swalMessages, apiHeader } from 'src/app/constants';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { swalMessages, apiHeader } from 'src/app/constants';
 export class ForgotPasswordService {
   constants: any;
   constructor(private swalMessages: swalMessages,
-    private http: HttpClient, private forgotForm: forgotForm) {
+    private http: HttpClient, private forgotForm: ForgotForm) {
     this.getConstants()
   }
 

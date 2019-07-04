@@ -1,25 +1,31 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { apiHeader, swalMessages } from '../../../constants';
-import { FormGroup } from '@angular/forms';
+import { SetHeaders } from 'src/app/AuthGuards/auth.interceptor';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestPasswordService {
 
-  constructor(private http: HttpClient, private swalMessages: swalMessages) { }
+  constructor(
+    private http: HttpClient,
+    private swalMessages: swalMessages,
+    private authInterceptor: SetHeaders,
+    private router: Router
+  ) { }
 
   resetPassword(form) {
-    console.log(form.value.code);
     if (form.valid) {
-      this.http.post(apiHeader + 'user/forget_change_password', JSON.stringify({
-        password: form.value.newPassword,
-        code: form.value.code
-      }))
+      this.http.post(apiHeader + 'user/forget_change_password/', JSON.stringify({
+        code: form.value.code,
+        password: form.value.newPassword
+      }), { headers: this.authInterceptor.setHeaders() })
         .subscribe(
           rest => {
             this.swalMessages.successAlert(this.swalMessages.resetPassword.successTitle200, this.swalMessages.resetPassword.successMsg200);
+            this.router.navigate(['/login']);
           },
           error => {
             if (error.status == 404) {
@@ -31,7 +37,6 @@ export class RestPasswordService {
             else {
               this.swalMessages.errorAlert(this.swalMessages.commonErrors.internalErrorTitle500, this.swalMessages.commonErrors.internalErrorMsg500)
             }
-
           });
     }
     else {

@@ -25,7 +25,7 @@ import { AuthInterceptor, SetHeaders } from './AuthGuards/auth.interceptor';
 import { swalMessages } from './constants';
 
 // ================ Forms ================
-import { forgotForm } from './core/modals/forgot.form';
+import { ForgotForm } from './core/modals/forgot.form';
 import { signupForm } from './core/modals/signup.form';
 import { loginForm } from './core/modals/login.form';
 import { HttpClient } from '@angular/common/http';
@@ -61,7 +61,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
   providers: [
     AccountModalService,
     ForgotPasswordService,
-    forgotForm,
+    ForgotForm,
     LoginService,
     loginForm,
     SignupService,
